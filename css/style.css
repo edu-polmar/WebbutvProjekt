@@ -1,17 +1,36 @@
 header {
   position: absolute;
   top: 0;
-  left: 0;
-  background-color: aquamarine;
+  background-color: cyan;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
+  max-height: 50px;
 }
 
-#headerimg {
-  width: 50px;
+.menu {
+  position: relative;
+  max-height: 50px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  height: auto;
+}
+
+.menu-buttons {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-item {
+  margin: 0 10px;
+  right: 0;
+}
+
+.headerimg {
+  position: relative;
+  height: 50px;
 }
 
 .hero {
