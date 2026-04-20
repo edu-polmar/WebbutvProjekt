@@ -26,6 +26,7 @@ header {
   list-style-type: none;
   margin: 0;
   padding: 15px;
+  align-items: baseline;
 }
 
 .menu-item {
@@ -34,12 +35,21 @@ header {
   padding-right: 70px;
 }
 
+.menu-item img {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
 .headerimg {
   position: relative;
   height: 50px;
 }
 
 .hero {
+  background-image: url("/images/hero_image.jpg");
+  background-size: cover;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -48,16 +58,8 @@ header {
   top: 0;
 }
 
-#heroimg {
+.herolink {
   position: relative;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(90%);
-}
-
-#herolink {
-  position: relative;
-  bottom: 50px;
   height: 5%;
   display: flex;
   justify-content: center;
@@ -111,10 +113,11 @@ main {
 }
 
 footer {
-  position: absolute;
+  position: relative;
   bottom: 0;
   background-color: #877666;
   width: 100%;
   height: auto;
   display: flex;
+  font-size: larger;
 }
