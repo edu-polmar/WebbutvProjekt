@@ -119,5 +119,46 @@ footer {
   width: 100%;
   height: auto;
   display: flex;
+  flex-direction: column;
   font-size: larger;
+  padding-top: 20px;
+}
+
+.socialmedia {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  align-self: center;
+}
+
+.newsletter_form {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.socialmedia img {
+  width: 35px;
+  height: 35px;
+  margin: 0 10px;
+}
+
+.paymentmethods img {
+  width: 100px;
+  height: 70px;
+}
+
+.socialmedia img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.paymentmethods {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+  margin-top: 10px;
 }
