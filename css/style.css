@@ -20,7 +20,6 @@
 main {
   position: absolute;
   top: 560px;
-  background-color: bisque;
   height: auto;
   display: flex;
   align-items: center;
