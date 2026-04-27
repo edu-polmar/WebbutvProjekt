@@ -47,9 +47,26 @@ main {
   font-size: 16px;
 }
 
+.product_size_buttons button:hover {
+  background-color: grey;
+}
+
 .product_details {
   position: relative;
   display: flex;
   background-color: yellow;
   width: 100%;
+  justify-content: center;
+  padding: 20px;
+}
+
+.highlight {
+  background-color: blue;
+}
+
+.price {
+  font-size: 30px;
+  font-weight: bold;
+  color: #1f1300;
+  margin-top: 20px;
 }

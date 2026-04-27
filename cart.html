@@ -3,12 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lana Del Rey Unofficial Store</title>
-    <link rel="stylesheet" href="/css/product.css" />
-    <link rel="stylesheet" href="/css/general.css" />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Protest+Guerrilla&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap");
-    </style>
+    <title>Document</title>
+    <link rel="stylesheet" href="css/general.css" />
   </head>
   <body>
     <header>
@@ -41,39 +37,29 @@
       </nav>
     </header>
     <main>
-      <section class="product_ratio">
-        <img
-          src="images/product_shirt.png"
-          alt="Product Image"
-          class="product_image"
-        />
-      </section>
-      <section id="product_info">
-        <h1>Product Name</h1>
-        <p>Product description goes here.</p>
-        <span class="price">$19.99</span>
-        <h2>Size</h2>
-        <ul class="product_size_buttons">
-          <li><button class="size-button">M</button></li>
-          <li><button class="size-button">L</button></li>
-          <li><button class="size-button">XL</button></li>
-        </ul>
-        <button id="addtocart">Add to Cart</button>
-      </section>
-      <section class="product_details">
-        <table>
-          <tr>
-            <th>Material</th>
-            <th>Care Instructions</th>
-            <th>Made In</th>
-          </tr>
-          <tr>
-            <td>100% Cotton</td>
-            <td>Machine wash cold, tumble dry low</td>
-            <td>USA</td>
-          </tr>
-        </table>
-      </section>
+      <div class="cart_container">
+        <h1>Your Cart</h1>
+        <div class="cart_item">
+          <img src="images/product_shirt.png" alt="Product Image" />
+          <div class="cart_item_details">
+            <h2>Product Name</h2>
+            <span class="price">$19.99</span>
+            <button class="remove_button">Remove</button>
+          </div>
+        </div>
+        <div class="cart_item">
+          <img src="images/product_shirt.png" alt="Product Image" />
+          <div class="cart_item_details">
+            <h2>Product Name</h2>
+            <span class="price">$19.99</span>
+            <button class="remove_button">Remove</button>
+          </div>
+        </div>
+        <div class="cart_summary">
+          <h2>Total: $39.98</h2>
+          <button class="checkout_button">Proceed to Checkout</button>
+        </div>
+      </div>
       <footer>
         <!--Sociala medier-->
         <div class="socialmedia">
@@ -133,7 +119,5 @@
         <h4>&copy; 2023 Lana Del Rey Unofficial Store. All rights reserved.</h4>
       </footer>
     </main>
-    <script src="/jscript/currency.js"></script>
-    <script src="/jscript/buttonselected.js"></script>
   </body>
 </html>
