@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/cart.css" />
   </head>
   <body>
     <header>
@@ -39,26 +40,14 @@
     <main>
       <div class="cart_container">
         <h1>Your Cart</h1>
-        <div class="cart_item">
-          <img src="images/product_shirt.png" alt="Product Image" />
-          <div class="cart_item_details">
-            <h2>Product Name</h2>
-            <span class="price">$19.99</span>
-            <button class="remove_button">Remove</button>
-          </div>
-        </div>
-        <div class="cart_item">
-          <img src="images/product_shirt.png" alt="Product Image" />
-          <div class="cart_item_details">
-            <h2>Product Name</h2>
-            <span class="price">$19.99</span>
-            <button class="remove_button">Remove</button>
-          </div>
-        </div>
-        <div class="cart_summary">
-          <h2>Total: $39.98</h2>
-          <button class="checkout_button">Proceed to Checkout</button>
-        </div>
+        <div id="cart_items"></div>
+        <h2>
+          Total: $<span id="cart_total"
+            ><script>
+              TotalPrice();
+            </script></span
+          >
+        </h2>
       </div>
       <footer>
         <!--Sociala medier-->
@@ -119,5 +108,7 @@
         <h4>&copy; 2023 Lana Del Rey Unofficial Store. All rights reserved.</h4>
       </footer>
     </main>
+    <script src="/jscript/cart.js"></script>
+    <script src="/jscript/currency.js"></script>
   </body>
 </html>

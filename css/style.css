@@ -27,6 +27,7 @@ main {
   flex-wrap: wrap;
   left: 0;
   background-color: #dfd6a7;
+  transition: transform 0.5s;
 }
 
 .product_outer_ratio {
@@ -55,6 +56,16 @@ main {
 .product_outer_ratio a:hover {
   color: #1f1300;
   text-decoration: underline;
+}
+
+.product_outer_ratio button {
+  background-color: #1f1300;
+  color: #dfd6a7;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin-top: 10px;
+  cursor: pointer;
 }
 
 .product_image {

@@ -125,3 +125,86 @@ footer {
   align-items: center;
   margin-top: 10px;
 }
+
+.cartTab {
+  width: 400px;
+  background-color: #1f1300;
+  color: #eee;
+  position: fixed;
+  top: -100vh;
+  right: 0;
+  display: grid;
+  grid-template-rows: 70px 1fr 70px;
+  transition: 0.5s;
+  z-index: 1000;
+}
+
+body.showCart .cartTab {
+  top: 0;
+}
+
+body.showCart main {
+  transform: none;
+}
+
+.cartTab h1 {
+  margin: 0;
+  padding: 20px;
+  font-size: 150%;
+  font-weight: bold;
+}
+
+.cartTab .btn {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.cartTab .btn button {
+  background-color: #a0a9ac;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cartTab .btn .close {
+  background-color: #567e89;
+}
+
+.cartTab .ListCart .item img {
+  width: 100%;
+}
+
+.cartTab .ListCart .item {
+  display: grid;
+  grid-template-columns: 70px 150px 50px 1fr;
+  gap: 10px;
+  text-align: center;
+  align-items: center;
+}
+
+.ListCart .quantity span {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-color: #eee;
+  color: #1f1300;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.ListCart .quantity span:nth-child(2) {
+  background-color: transparent;
+  color: #eee;
+}
+
+.ListCart .item:nth-child(even) {
+  background-color: #2b1c04;
+}
+
+.ListCart {
+  overflow: auto;
+}
+
+.ListCart::-webkit-scrollbar {
+  display: none;
+}
