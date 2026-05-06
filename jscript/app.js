@@ -91,7 +91,7 @@ const addToCart = (product_id) => {
 };
 
 const addCartToMemory = () => {
-  localStorage.estItem("cart", JSON.stringify(carts));
+  localStorage.setItem("cart", JSON.stringify(carts));
 };
 
 const addCartToHTML = () => {
@@ -113,6 +113,7 @@ const addCartToHTML = () => {
       totalQuantity = totalQuantity + parseInt(cart.quantity) || 0;
       let newCart = document.createElement("div");
       newCart.classList.add("item");
+      newCart.dataset.id = cart.product_id;
       let positionProduct = listProducts.findIndex(
         (value) => value.id == cart.product_id,
       );
@@ -149,6 +150,50 @@ const addCartToHTML = () => {
     "DOM items:",
     ListCartHTML.children.length,
   );
+};
+
+if (ListCartHTML) {
+  ListCartHTML.addEventListener("click", (event) => {
+    let positionClick = event.target;
+    if (
+      positionClick.classList.contains("minus") ||
+      positionClick.classList.contains("plus")
+    ) {
+      let itemElement = positionClick.closest(".item");
+      if (!itemElement) return;
+      let product_id = itemElement.dataset.id;
+      let type = "minus";
+      if (positionClick.classList.contains("plus")) {
+        type = "plus";
+      }
+      changeQuantity(product_id, type);
+    }
+  });
+}
+
+const changeQuantity = (product_id, type) => {
+  let positionItemInCart = carts.findIndex(
+    (value) => value.product_id == product_id,
+  );
+  if (positionItemInCart >= 0) {
+    let currentQuantity = Number(carts[positionItemInCart].quantity) || 0;
+    switch (type) {
+      case "plus":
+        carts[positionItemInCart].quantity = currentQuantity + 1;
+        break;
+
+      default:
+        let valueChange = currentQuantity - 1;
+        if (valueChange > 0) {
+          carts[positionItemInCart].quantity = valueChange;
+        } else {
+          carts.splice(positionItemInCart, 1);
+        }
+        break;
+    }
+  }
+  addCartToMemory();
+  addCartToHTML();
 };
 
 const initApp = () => {
