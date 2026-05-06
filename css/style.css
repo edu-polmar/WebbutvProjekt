@@ -30,6 +30,12 @@ main {
   transition: transform 0.5s;
 }
 
+.listProduct {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
 .product_outer_ratio {
   display: flex;
   flex-direction: column;
