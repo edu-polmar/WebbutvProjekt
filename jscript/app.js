@@ -1,5 +1,6 @@
 let iconCart = document.querySelector(".icon_cart");
 let closeCart = document.querySelector(".close");
+let checkoutCart = document.querySelector(".checkout");
 let body = document.querySelector("body");
 let listProductHTML = document.querySelector(".listProduct");
 let ListCartHTML = document.querySelector(".ListCart");
@@ -34,6 +35,12 @@ if (closeCart) {
   });
 } else {
   console.warn(".close element not found");
+}
+
+if (checkoutCart) {
+  checkoutCart.addEventListener("click", () => {
+    window.location.href = "cart.html";
+  });
 }
 
 const addDataToHTML = () => {
