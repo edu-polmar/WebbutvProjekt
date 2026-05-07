@@ -33,9 +33,12 @@
             /></a>
           </li>
           <li class="menu-item">
-            <a href="cart.html"
-              ><img src="/images/icons/bag-handle-outline.svg" alt="cart"
-            /></a>
+            <img
+              src="/images/icons/bag-handle-outline.svg"
+              alt="cart"
+              class="icon_cart"
+            />
+            <span>0</span>
           </li>
         </ul>
       </nav>
@@ -64,18 +67,37 @@
       </section>
       <section class="product_details">
         <table>
-          <tr>
-            <th>Material</th>
-            <th>Care Instructions</th>
-            <th>Made In</th>
-          </tr>
-          <tr>
-            <td>100% Cotton</td>
-            <td>Machine wash cold, tumble dry low</td>
-            <td>USA</td>
-          </tr>
+          <caption>
+            yadayadyayda
+          </caption>
+          <thead>
+            <tr>
+              <th>Material</th>
+              <th>Care Instructions</th>
+              <th>Made In</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>100% Cotton</td>
+              <td>Machine wash cold, tumble dry low</td>
+              <td>USA</td>
+            </tr>
+            <tr>
+              <td>Example 1</td>
+              <td>Example 2</td>
+              <td>Example 3</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th scope="row" colspan="2">Example 4</th>
+              <td>Example 5</td>
+            </tr>
+          </tfoot>
         </table>
       </section>
+
       <footer>
         <!--Sociala medier-->
         <div class="socialmedia">
@@ -98,17 +120,46 @@
         </div>
         <!--Kontaktformulär-->
         <section class="newsletter_form">
-          <label for="email">Sign up for our newsletter</label><br />
-          <input type="email" id="email" placeholder="Your Email" /><br />
-          <label for="phonenumber">Phone Number</label><br />
-          <input
-            type="tel"
-            name="phonenumber"
-            id="phonenumber"
-            placeholder="1234567890"
-          />
-          <br />
-          <button type="submit">Subscribe</button>
+          <form action="">
+            <label for="fname">First Name</label>
+            
+            <input
+              type="text"
+              id="fname"
+              name="firstname"
+              placeholder="Your name.."
+            />
+            
+            <label for="lname">Last Name</label>
+            <input
+              type="text"
+              id="lname"
+              name="lastname"
+              placeholder="Your last name.."
+            />
+            
+            <label for="country">Country</label>
+            <select name="country" id="country">
+              <option value="sweden">Sweden</option>
+              <option value="uk">United Kingdom</option>
+              <option value="us">United States</option>
+              <option value="germany">Germany</option>
+              <option value="japan">Japan</option></select
+            >
+
+            <label for="email">Sign up for our newsletter</label>
+            <input type="email" id="email" placeholder="Your Email" 
+
+            <label for="phonenumber">Phone Number</label>
+            <input
+              type="tel"
+              name="phonenumber"
+              id="phonenumber"
+              placeholder="1234567890"
+            />
+            
+            <input type="submit" value="Subscribe">
+          </form>
         </section>
         <div class="paymentmethods">
           <img

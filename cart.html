@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Lana Del Rey Unofficial Stor</title>
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/cart.css" />
   </head>
@@ -30,9 +30,12 @@
             /></a>
           </li>
           <li class="menu-item">
-            <a href="cart.html"
-              ><img src="/images/icons/bag-handle-outline.svg" alt="cart"
-            /></a>
+            <img
+              src="/images/icons/bag-handle-outline.svg"
+              alt="cart"
+              class="icon_cart"
+            />
+            <span>0</span>
           </li>
         </ul>
       </nav>
@@ -43,6 +46,7 @@
         <div id="cart_items"></div>
         <h2>Total: $<span id="cart_total">0.00</span></h2>
       </div>
+
       <footer>
         <!--Sociala medier-->
         <div class="socialmedia">
@@ -65,17 +69,46 @@
         </div>
         <!--Kontaktformulär-->
         <section class="newsletter_form">
-          <label for="email">Sign up for our newsletter</label><br />
-          <input type="email" id="email" placeholder="Your Email" /><br />
-          <label for="phonenumber">Phone Number</label><br />
-          <input
-            type="tel"
-            name="phonenumber"
-            id="phonenumber"
-            placeholder="1234567890"
-          />
-          <br />
-          <button type="submit">Subscribe</button>
+          <form action="">
+            <label for="fname">First Name</label>
+            
+            <input
+              type="text"
+              id="fname"
+              name="firstname"
+              placeholder="Your name.."
+            />
+            
+            <label for="lname">Last Name</label>
+            <input
+              type="text"
+              id="lname"
+              name="lastname"
+              placeholder="Your last name.."
+            />
+            
+            <label for="country">Country</label>
+            <select name="country" id="country">
+              <option value="sweden">Sweden</option>
+              <option value="uk">United Kingdom</option>
+              <option value="us">United States</option>
+              <option value="germany">Germany</option>
+              <option value="japan">Japan</option></select
+            >
+
+            <label for="email">Sign up for our newsletter</label>
+            <input type="email" id="email" placeholder="Your Email" 
+
+            <label for="phonenumber">Phone Number</label>
+            <input
+              type="tel"
+              name="phonenumber"
+              id="phonenumber"
+              placeholder="1234567890"
+            />
+            
+            <input type="submit" value="Subscribe">
+          </form>
         </section>
         <div class="paymentmethods">
           <img
@@ -102,7 +135,7 @@
         <h4>&copy; 2023 Lana Del Rey Unofficial Store. All rights reserved.</h4>
       </footer>
     </main>
+    <script src="/jscript/app.js"></script>
     <script src="/jscript/cart.js"></script>
-    <script src="/jscript/currency.js"></script>
   </body>
 </html>
