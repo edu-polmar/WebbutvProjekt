@@ -5,3 +5,99 @@ main {
   left: 0;
   width: 100%;
 }
+
+.CheckoutContainer {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  background-color: darkgreen;
+}
+
+.CartContainer {
+  display: flex;
+  width: 50%;
+  background-color: blueviolet;
+  flex-direction: column;
+}
+
+.CartContainer h1 {
+  align-self: center;
+}
+
+.CheckoutWindow {
+  position: relative;
+  top: 80px;
+}
+
+.CheckoutWindow h2,
+h3,
+h4 {
+  font-size: 25px;
+}
+
+.CheckoutWindow h5 {
+  font-size: 30px;
+}
+
+.CheckoutWindow ul {
+  display: flex;
+  flex-direction: column;
+  background-color: green;
+  padding-right: 5%;
+}
+
+.CheckoutWindow li {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.CheckoutWindow button {
+  border: none;
+  padding: 5px;
+  background-color: black;
+  color: #eee;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.CheckoutWindow button:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.CartItem {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: cornsilk;
+  text-align: center;
+}
+
+.CartItem:nth-child(even) {
+  background-color: rgb(81, 74, 44);
+}
+
+.CartItem div {
+  padding-right: 70px;
+}
+
+.CartItem img {
+  padding-right: 30px;
+  width: 200px;
+}
+
+.CartItem .quantity span {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-color: #eee;
+  color: #1f1300;
+  border-radius: 50%;
+  cursor: pointer;
+}
