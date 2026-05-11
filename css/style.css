@@ -1,11 +1,13 @@
 .hero {
   background-image: url("/images/hero_image.jpg");
   background-size: cover;
+  background-position-x: center;
   display: flex;
   flex-direction: column;
   position: relative;
   background-color: lightblue;
   height: 540px;
+  width: 100vw;
   top: 0;
 }
 
@@ -77,4 +79,53 @@ main {
 .product_image {
   position: relative;
   width: 90%;
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    background-image: url(/images/hero_image_3.jpg);
+  }
+
+  .listProduct {
+    width: 100vw;
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 80px;
+  }
+
+  .product_outer_ratio {
+    width: calc(100vw / 2.5);
+    height: 400px;
+  }
+
+  .product_image {
+    width: 120%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero {
+    background-image: url(/images/hero_image_2.jpg);
+  }
+
+  .listProduct {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    width: 100vw;
+    padding-bottom: 80px;
+  }
+
+  .product_outer_ratio {
+    width: calc(100vw / 1.5);
+    height: 400px;
+    padding-bottom: 50px;
+    margin: 10px;
+    margin-top: 20px;
+    margin-bottom: 90px;
+  }
+
+  .product_image {
+    width: 130%;
+  }
 }

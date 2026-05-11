@@ -19,7 +19,7 @@ header {
   top: 0;
   left: 0;
   background-color: #dfd6a7;
-  width: 100%;
+  width: 100vw;
   max-height: 50px;
 }
 
@@ -251,4 +251,7 @@ body.showCart main {
 
 .ListCart::-webkit-scrollbar {
   display: none;
+}
+
+@media screen and (max-width: 768px) {
 }
