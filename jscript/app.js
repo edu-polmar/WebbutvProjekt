@@ -112,6 +112,7 @@ const addCartToHTML = () => {
     console.error(".ListCart element not found");
     return;
   }
+
   ListCartHTML.innerHTML = "";
   let totalQuantity = 0;
   if (carts.length > 0) {
@@ -140,9 +141,9 @@ const addCartToHTML = () => {
             <div class="name">${info.name}</div>
             <div class="totalPrice">$${info.price * cart.quantity}</div>
             <div class="quantity">
-              <span class="minus">-</span>
+              <span class="minus" data-type="minus">-</span>
               <span>${cart.quantity}</span>
-              <span class="plus">+</span>
+              <span class="plus" data-type="plus">+</span>
             </div>`;
       ListCartHTML.appendChild(newCart);
       console.log(`Added cart item to DOM`);
@@ -162,19 +163,16 @@ const addCartToHTML = () => {
 if (ListCartHTML) {
   ListCartHTML.addEventListener("click", (event) => {
     let positionClick = event.target;
-    if (
-      positionClick.classList.contains("minus") ||
-      positionClick.classList.contains("plus")
-    ) {
-      let itemElement = positionClick.closest(".item");
-      if (!itemElement) return;
-      let product_id = itemElement.dataset.id;
-      let type = "minus";
-      if (positionClick.classList.contains("plus")) {
-        type = "plus";
-      }
-      changeQuantity(product_id, type);
-    }
+
+    let type = positionClick.dataset.type;
+    if (!type) return;
+
+    let itemElement = positionClick.closest(".item");
+    if (!itemElement) return;
+
+    let product_id = itemElement.dataset.id;
+
+    changeQuantity(product_id, type);
   });
 }
 
@@ -211,7 +209,9 @@ const initApp = () => {
     .then((data) => {
       console.log("JSON data received:", data);
       listProducts = data;
-      addDataToHTML();
+      if (listProductHTML) {
+        addDataToHTML();
+      }
 
       //fetch cart from memory
       if (localStorage.getItem("cart")) {
