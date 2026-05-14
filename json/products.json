@@ -3,48 +3,48 @@
     "id": 1,
     "name": "Shirt",
     "price": 20,
-    "image": "images/product_shirt.png"
+    "image": "images/products/product_shirt_1.png"
   },
   {
     "id": 2,
     "name": "Shirt",
     "price": 18,
-    "image": "images/product_shirt.png"
+    "image": "images/products/product_shirt_2.png"
   },
   {
     "id": 3,
     "name": "Shirt",
     "price": 30,
-    "image": "images/product_shirt.png"
+    "image": "images/products/product_shirt_3.png"
   },
   {
     "id": 4,
     "name": "Shirt",
     "price": 30,
-    "image": "images/product_shirt.png"
+    "image": "images/products/product_shirt_4.png"
   },
   {
     "id": 5,
     "name": "Shirt",
     "price": 10,
-    "image": "images/product_shirt.png"
+    "image": "images/products/product_shirt_5.png"
   },
   {
     "id": 6,
     "name": "Shirt",
     "price": 15,
-    "image": "images/product_shirt.png"
+    "image": "images/products/product_shirt_6.png"
   },
   {
     "id": 7,
     "name": "Shirt",
     "price": 50,
-    "image": "images/product_shirt.png"
+    "image": "images/products/product_shirt_7.png"
   },
   {
     "id": 8,
     "name": "Shirt",
     "price": 15,
-    "image": "images/product_shirt.png"
+    "image": "images/products/product_shirt_8.png"
   }
 ]

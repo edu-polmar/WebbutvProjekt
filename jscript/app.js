@@ -54,7 +54,7 @@ const addDataToHTML = () => {
       newProduct.dataset.id = product.id;
       newProduct.innerHTML = `
         <img class="product_image" src="${product.image}" alt="${product.name}" />
-        <h2><a href="product.html">${product.name}</a></h2>
+        <h2><a href="product.html?id=${product.id}">${product.name}</a></h2>
         <span class="price">$${product.price}</span>
         <button class="addToCart">ADD TO CART</button>
       `;
