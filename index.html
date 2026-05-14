@@ -6,6 +6,10 @@
     <title>Lana Del Rey Unofficial Store</title>
     <link rel="stylesheet" href="/css/general.css" />
     <link rel="stylesheet" href="/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
+    />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Protest+Guerrilla&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap");
     </style>
@@ -71,95 +75,92 @@
           <button class="checkout">Check Out</button>
         </div>
       </div>
-      <footer>
-        <!--Sociala medier-->
-        <div class="socialmedia">
-          <a href="https://www.facebook.com/lanadelrey"
-            ><img
-              src="images/icons/socialmedia/Facebook_icon.svg"
-              alt="Facebook"
-          /></a>
-          <a href="https://www.instagram.com/lanadelrey/"
-            ><img
-              src="images/icons/socialmedia/Instagram_icon.svg"
-              alt="Instagram"
-          /></a>
-          <a href="https://twitter.com/LanaDelRey"
-            ><img src="images/icons/socialmedia/X_icon.svg" alt="X"
-          /></a>
-          <a href="https://open.spotify.com/artist/00FQb4jTyendYWaN8pK0wa"
-            ><img src="images/icons/socialmedia/Spotify_icon.svg" alt="Spotify"
-          /></a>
-        </div>
-        <!--Kontaktformulär-->
-        <section class="newsletter_form">
-          <form action="">
-            <label for="fname">First Name</label>
-
-            <input
-              type="text"
-              id="fname"
-              name="firstname"
-              placeholder="Your name.."
-            />
-
-            <label for="lname">Last Name</label>
-            <input
-              type="text"
-              id="lname"
-              name="lastname"
-              placeholder="Your last name.."
-            />
-
-            <label for="country">Country</label>
-            <select name="country" id="country">
-              <option value="sweden">Sweden</option>
-              <option value="uk">United Kingdom</option>
-              <option value="us">United States</option>
-              <option value="germany">Germany</option>
-              <option value="japan">Japan</option>
-            </select>
-
-            <label for="email">Sign up for our newsletter</label>
-            <input type="email" id="email" placeholder="Your Email" />
-
-            <label for="phonenumber">Phone Number</label>
-            <input
-              type="tel"
-              name="phonenumber"
-              id="phonenumber"
-              placeholder="1234567890"
-            />
-
-            <input type="submit" value="Subscribe" />
-          </form>
-        </section>
-        <div class="paymentmethods">
-          <img
-            src="images/icons/payment/amazon-pay-svgrepo-com.svg"
-            alt="Amazon Pay"
-          />
-          <img
-            src="images/icons/payment/apple-pay-svgrepo-com.svg"
-            alt="Apple Pay"
-          />
-          <img
-            src="images/icons/payment/bancontact-svgrepo-com.svg"
-            alt="Bancontact"
-          />
-          <img
-            src="images/icons/payment/bitcoin-svgrepo-com.svg"
-            alt="Bitcoin"
-          />
-          <img
-            src="images/icons/payment/mastercard-full-svgrepo-com.svg"
-            alt="Mastercard"
-          />
-        </div>
-        <h4>&copy; 2023 Lana Del Rey Unofficial Store. All rights reserved.</h4>
-      </footer>
     </main>
+    <footer>
+      <!--Sociala medier-->
+      <div class="socialmedia">
+        <a href="https://www.facebook.com/lanadelrey"
+          ><img src="images/icons/socialmedia/Facebook_icon.svg" alt="Facebook"
+        /></a>
+        <a href="https://www.instagram.com/lanadelrey/"
+          ><img
+            src="images/icons/socialmedia/Instagram_icon.svg"
+            alt="Instagram"
+        /></a>
+        <a href="https://twitter.com/LanaDelRey"
+          ><img src="images/icons/socialmedia/X_icon.svg" alt="X"
+        /></a>
+        <a href="https://open.spotify.com/artist/00FQb4jTyendYWaN8pK0wa"
+          ><img src="images/icons/socialmedia/Spotify_icon.svg" alt="Spotify"
+        /></a>
+      </div>
+      <!--Kontaktformulär-->
+      <section class="newsletter_form">
+        <form action="">
+          <label for="fname">First Name</label>
+
+          <input
+            type="text"
+            id="fname"
+            name="firstname"
+            placeholder="Your name.."
+          />
+
+          <label for="lname">Last Name</label>
+          <input
+            type="text"
+            id="lname"
+            name="lastname"
+            placeholder="Your last name.."
+          />
+
+          <label for="country">Country</label>
+          <select name="country" id="country">
+            <option value="sweden">Sweden</option>
+            <option value="uk">United Kingdom</option>
+            <option value="us">United States</option>
+            <option value="germany">Germany</option>
+            <option value="japan">Japan</option>
+          </select>
+
+          <label for="email">Sign up for our newsletter</label>
+          <input type="email" id="email" placeholder="Your Email" />
+
+          <label for="phonenumber">Phone Number</label>
+          <input
+            type="tel"
+            name="phonenumber"
+            id="phonenumber"
+            placeholder="1234567890"
+          />
+
+          <input type="submit" value="Subscribe" />
+        </form>
+      </section>
+      <div class="paymentmethods">
+        <img
+          src="images/icons/payment/amazon-pay-svgrepo-com.svg"
+          alt="Amazon Pay"
+        />
+        <img
+          src="images/icons/payment/apple-pay-svgrepo-com.svg"
+          alt="Apple Pay"
+        />
+        <img
+          src="images/icons/payment/bancontact-svgrepo-com.svg"
+          alt="Bancontact"
+        />
+        <img src="images/icons/payment/bitcoin-svgrepo-com.svg" alt="Bitcoin" />
+        <img
+          src="images/icons/payment/mastercard-full-svgrepo-com.svg"
+          alt="Mastercard"
+        />
+      </div>
+      <h4>&copy; 2023 Lana Del Rey Unofficial Store. All rights reserved.</h4>
+    </footer>
     <script src="/jscript/currency.js"></script>
     <script src="/jscript/app.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
   </body>
 </html>
