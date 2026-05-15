@@ -102,6 +102,10 @@ footer {
   align-items: center;
 }
 
+footer h2 {
+  font-size: 16px;
+}
+
 .socialmedia {
   display: flex;
   flex-direction: row;
