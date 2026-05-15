@@ -95,13 +95,12 @@ const addToCart = (product_id) => {
   console.log("Updated carts:", carts);
   addCartToHTML();
   addCartToMemory();
-  toastr["success"]("Item added to Cart!");
   toastr.options = {
     closeButton: false,
     debug: false,
     newestOnTop: false,
     progressBar: false,
-    positionClass: "toast-top-right",
+    positionClass: "toast-top-center",
     preventDuplicates: false,
     onclick: null,
     showDuration: "300",
@@ -113,6 +112,7 @@ const addToCart = (product_id) => {
     showMethod: "fadeIn",
     hideMethod: "fadeOut",
   };
+  toastr["success"]("Item added to Cart!");
 };
 
 const addCartToMemory = () => {

@@ -11,14 +11,6 @@
   top: 0;
 }
 
-.herolink {
-  position: relative;
-  height: 5%;
-  display: flex;
-  justify-content: center;
-  align-items: top;
-}
-
 main {
   position: relative;
   top: 0;

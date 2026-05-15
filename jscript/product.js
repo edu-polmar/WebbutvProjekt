@@ -1,3 +1,5 @@
+let GoToCheckout = document.querySelector("#Checkout");
+
 fetch("/json/products.json");
 const initProductPage = () => {
   const params = new URLSearchParams(window.location.search);
@@ -23,5 +25,11 @@ const initProductPage = () => {
       document.querySelector("#addtocart").onclick = () => addToCart(productId);
     });
 };
+
+document.addEventListener("click", (event) => {
+  if (event.target.id === "Checkout") {
+    window.location.href = "cart.html";
+  }
+});
 
 document.addEventListener("DOMContentLoaded", initProductPage);

@@ -27,7 +27,7 @@ header {
   top: 0;
   left: 0;
   background-color: #dfd6a7;
-  width: 100vw;
+  width: 100%;
   max-height: 50px;
 }
 
@@ -37,21 +37,17 @@ header {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  height: auto;
 }
 
 .menu-buttons {
   display: flex;
   flex-direction: row;
-  list-style-type: none;
   margin: 0;
   padding: 15px;
   align-items: baseline;
 }
 
 .menu-item {
-  margin: 0;
-  right: 0;
   padding-right: 70px;
 }
 
@@ -59,6 +55,7 @@ header {
   transform: scale(1.1);
   transition: transform 0.3s ease;
 }
+
 #currency-select {
   position: relative;
   top: -4px;
@@ -72,7 +69,6 @@ header {
 }
 
 .menu-item img {
-  position: relative;
   width: 20px;
   height: 20px;
   margin-right: 5px;
@@ -93,19 +89,17 @@ header {
 }
 
 .headerimg {
-  position: relative;
   height: 50px;
 }
 
 footer {
-  position: relative;
   background-color: #877666;
   width: 100%;
-  height: auto;
   display: flex;
   flex-direction: column;
   font-size: larger;
-  padding-top: 20px;
+  padding: 20px 0;
+  align-items: center;
 }
 
 .socialmedia {
@@ -114,11 +108,20 @@ footer {
   justify-content: center;
   align-items: center;
   margin-top: 10px;
-  align-self: center;
+}
+
+.socialmedia img {
+  width: 35px;
+  height: 35px;
+  margin: 0 10px;
+}
+
+.socialmedia img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
 }
 
 .newsletter_form {
-  align-self: center;
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -153,28 +156,17 @@ input[type="submit"]:hover {
   background-color: #138eb0;
 }
 
-.socialmedia img {
-  width: 35px;
-  height: 35px;
-  margin: 0 10px;
-}
-
-.paymentmethods img {
-  width: 100px;
-  height: 70px;
-}
-
-.socialmedia img:hover {
-  transform: scale(1.1);
-  transition: transform 0.3s ease;
-}
-
 .paymentmethods {
   display: flex;
   flex-direction: row;
   justify-content: right;
   align-items: center;
   margin-top: 10px;
+}
+
+.paymentmethods img {
+  width: 100px;
+  height: 70px;
 }
 
 .cartTab {
@@ -192,10 +184,6 @@ input[type="submit"]:hover {
 
 body.showCart .cartTab {
   top: 0;
-}
-
-body.showCart main {
-  transform: none;
 }
 
 .cartTab h1 {
@@ -221,16 +209,28 @@ body.showCart main {
   background-color: #567e89;
 }
 
-.cartTab .ListCart .item img {
-  width: 100%;
-}
-
 .cartTab .ListCart .item {
   display: grid;
   grid-template-columns: 70px 150px 50px 1fr;
   gap: 10px;
   text-align: center;
   align-items: center;
+}
+
+.cartTab .ListCart .item img {
+  width: 100%;
+}
+
+.ListCart {
+  overflow: auto;
+}
+
+.ListCart::-webkit-scrollbar {
+  display: none;
+}
+
+.ListCart .item:nth-child(even) {
+  background-color: #2b1c04;
 }
 
 .ListCart .quantity span {
@@ -246,19 +246,4 @@ body.showCart main {
 .ListCart .quantity span:nth-child(2) {
   background-color: transparent;
   color: #eee;
-}
-
-.ListCart .item:nth-child(even) {
-  background-color: #2b1c04;
-}
-
-.ListCart {
-  overflow: auto;
-}
-
-.ListCart::-webkit-scrollbar {
-  display: none;
-}
-
-@media screen and (max-width: 768px) {
 }
